@@ -6,8 +6,6 @@ const Folder = ({folderData, addItem, deleteItem, updateItem}) => {
     const [expanded, setExpanded] = useState(false)
     const [newItem, setNewItem] = useState('')
 
-    // console.log("FOlder --> folderData : ", folderData)
-
     const handleFolderExpansion = () => {
         setExpanded(t => !t)
     }

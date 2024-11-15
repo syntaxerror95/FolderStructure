@@ -2,8 +2,6 @@ import { useState } from "react"
 const NewItem = ({folderData, parentId, type, handleCloseNewItem, addItem}) => {
     const [val, setVal] = useState('')
 
-    // console.log("NewItem -> folderData : ", folderData)
-
     const handleBlur = () => {
         handleCloseNewItem()
     }
