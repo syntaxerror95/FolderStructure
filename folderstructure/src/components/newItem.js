@@ -13,6 +13,7 @@ const NewItem = ({folderData, parentId, type, handleCloseNewItem, addItem}) => {
     const handleEnter = (e) => {
         if (e.keyCode === 13 && val){
             addItem(val, parentId, type === 'folder')
+            handleCloseNewItem()
         } 
     }
 

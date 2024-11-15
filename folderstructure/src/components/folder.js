@@ -40,9 +40,18 @@ const Folder = ({folderData, addItem, deleteItem, updateItem}) => {
                     <button type={'button'} onClick={e => handleNewItem(e, 'folder')} >{`➕folder`}</button>
                     <button type={'button'} onClick={e => handleDeleteItem(e)}>{`➖`}</button>
                 </span>
-            {newItem && <NewItem folderData={folderData} parentId={folderData.id}  type={newItem} handleCloseNewItem={handleCloseNewItem} addItem={addItem}/>}
+            {newItem && <NewItem 
+                            folderData={folderData} 
+                            parentId={folderData.id}  
+                            type={newItem} 
+                            handleCloseNewItem={handleCloseNewItem} 
+                            addItem={addItem}/>}
             </div>
-            {expanded && folderData.items.map(item => <Folder folderData={item} addItem={addItem} deleteItem={deleteItem} updateItem={updateItem}/>)}
+            {expanded && folderData.items.map(item => <Folder 
+                                                        folderData={item} 
+                                                        addItem={addItem} 
+                                                        deleteItem={deleteItem} 
+                                                        updateItem={updateItem}/>)}
         </>
     ) : (
         <div className='file' style={{marginLeft: '10px'}}>
