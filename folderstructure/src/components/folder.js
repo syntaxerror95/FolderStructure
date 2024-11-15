@@ -41,7 +41,6 @@ const Folder = ({folderData, addItem, deleteItem, updateItem}) => {
                     <button type={'button'} onClick={e => handleDeleteItem(e)}>{`➖`}</button>
                 </span>
             {newItem && <NewItem 
-                            folderData={folderData} 
                             parentId={folderData.id}  
                             type={newItem} 
                             handleCloseNewItem={handleCloseNewItem} 
